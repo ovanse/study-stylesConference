@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
   License: none (public domain)
-*/
+  */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,7 +51,9 @@ table {
 Сетка
 =================================================
 */
-*, *::before, *:after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -69,7 +71,11 @@ table {
 Типографика
 =================================================
 */
-h1, h3, h4, h5, p {
+h1,
+h3,
+h4,
+h5,
+p {
   margin-bottom: 22px;
 }
 
@@ -95,4 +101,46 @@ h1, h3, h4, h5, p {
 */
 .hero {
   padding: 22px 80px 66px 80px;
+}
+
+/*
+=================================================
+ClearFix
+=================================================
+*/
+.group::before,
+.group::after {
+  content: "";
+  display: table;
+}
+.group::after {
+  clear: both;
+}
+.group::before {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+=================================================
+Основной заголовок
+=================================================
+*/
+.logo {
+  border-top: 4px solid #648880;
+  float: left;
+  padding: 40px 0 22px 0;
+}
+
+/*
+=================================================
+Основной подал
+=================================================
+*/
+.primary-footer small {
+  float: left;
+}
+.primary-footer {
+  padding-bottom: 44px;
+  padding-top: 44px;
 }
